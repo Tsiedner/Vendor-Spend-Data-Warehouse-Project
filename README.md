@@ -6,10 +6,22 @@ This project demonstrates analytics engineering skills by building a SQL-based d
 
 The goal is to showcase end-to-end analytics engineering capabilities: data ingestion, transformation, modeling, and visualization.
 
---
+
+## 🛠️ Tech Stack
+- **SQL** (Postgres/MySQL) for data wrangling and transformations
+- **Power BI** for dashboards and visualization
+- **GitHub** for documentation and reproducibility 
+
 
 ## 📊 Data Architecture
 The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers:
 * Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 * Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 * Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
+
+
+## 📈 Dashboards
+Dashboards provide insights into:
+* Vendor performance over time
+* Spend distribution across contracts
+* Highlighted anomalies for risk monitoring 
