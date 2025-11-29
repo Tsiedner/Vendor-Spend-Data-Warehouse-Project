@@ -10,18 +10,26 @@ Script Purpose:
 */
 
 -- Drop and recreate the 'DataWarehouse' database
-IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
-BEGIN
-    ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-    DROP DATABASE DataWarehouse;
-END;
+CREATE DATABASE "DataWarehouse"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
 
 -- Create the 'DataWarehouse' database
 CREATE DATABASE DataWarehouse;
 
 -- Create Schemas
-CREATE SCHEMA bronze;
+CREATE SCHEMA IF NOT EXISTS bronze
+    AUTHORIZATION postgres;
 
-CREATE SCHEMA silver;
+CREATE SCHEMA IF NOT EXISTS silver
+    AUTHORIZATION postgres;
 
-CREATE SCHEMA gold;
+CREATE SCHEMA IF NOT EXISTS gold
+    AUTHORIZATION postgres;
