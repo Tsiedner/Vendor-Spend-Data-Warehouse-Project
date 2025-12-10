@@ -1,5 +1,5 @@
 # Vendor Spend Data Warehouse Project
-Building a modern data warehouse using PostgreSQL, including ETL processes, data modeling, and analytics.
+Building a modern data warehouse using SQL Sever, including ETL processes, data modeling, and analytics.
 
 ## 📌 Project Overview
 This project demonstrates analytics engineering skills by building a SQL-based data warehouse for vendor spend analysis. The pipeline ingests raw procurement data, models it into fact and dimension tables, and enables anomaly detection queries for vendor risk and spend monitoring.
@@ -8,7 +8,7 @@ The goal is to showcase end-to-end analytics engineering capabilities: data inge
 
 
 ## 🛠️ Tech Stack
-- **SQL** (Postgres) for data wrangling and transformations
+- **SQL** (SSMS) for data wrangling and transformations
 - **Power BI** for dashboards and visualization
 - **GitHub** for documentation and reproducibility 
 
